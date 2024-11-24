@@ -48,12 +48,12 @@ Each of them contains a ground-truth subgraphs file `{name}-1.90.anomaly.txt` an
 
 ### Blur
 
-The Blur dataset is a transaction dataset from the NFT marketplace [55], which is compiled by Etherscan API[3] from Oct. 19, 2022 to Apr. 1, 2023. They contain NFT transactions among addresses.
+The Blur dataset is a transaction dataset from the NFT marketplace [55], compiled by Etherscan API[3] from Oct. 19, 2022, to Apr. 1, 2023. It contains NFT transactions among addresses.
 
 dataset/blur contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
 ### PlusTokenPonzi
-The PlusTokenPonzi dataset is a real Ethereum blockchain transaction dataset that involves money laundering activities from EthereumHeist [24]. It includes detailed information such as transaction timestamps and amounts, service provider address labels, hierarchical levels of laundering addresses, etc. This is the first publicly available dataset with ground truth data on money laundering.
+The PlusTokenPonzi dataset is a real Ethereum blockchain transaction dataset that involves money laundering activities from EthereumHeist. It includes detailed information such as transaction timestamps and amounts, service provider address labels, hierarchical levels of laundering addresses, etc. This is the first publicly available dataset with ground truth data on money laundering.
 
 ## Data preprocessing
 
