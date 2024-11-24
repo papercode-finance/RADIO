@@ -52,6 +52,9 @@ The Blur dataset is a transaction dataset from the NFT marketplace [55], which i
 
 dataset/blur contains a file with abnormal subgraphs `{name}-1.90.anomaly.txt` and an edge file `{name}-1.90.ungraph.txt`.
 
+###PlusTokenPonzi
+The PlusTokenPonzi dataset is a real Ethereum blockchain transaction dataset that involves money laundering activities from EthereumHeist [24]. It includes detailed information such as transaction timestamps and amounts, service provider address labels, hierarchical levels of laundering addresses, etc. This is the first publicly available dataset with ground truth data on money laundering.
+
 ## Data preprocessing
 
 Consistent with AntiBenford [2], transactions valued at less than 1 unit are excluded during preprocessing. The primary step involves constructing the graph. To represent multiple transactions between two nodes, we combine them into a single edge. Each edge is associated with the transaction frequency and the financial distribution, i.e., the probabilities of transaction amounts starting with a certain digit. This resulting input graph is used for our analysis.
@@ -69,7 +72,7 @@ python run.py --dataset=eth-2019jan
 Main arguments:
 
 ```
---dataset [eth-2019jan,eth-2018jan,blur]: the dataset to run
+--dataset [eth-2019jan,eth-2018jan,blur,PlusTokenPonzi]: the dataset to run
 --n_layers: number of GNN layers
 --pred_size: total number of predicted anomaly subgraphs
 --agent_lr: the learning rate of Anomalous Subgraph Refinement
